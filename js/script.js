@@ -1,3 +1,21 @@
-document.getElementById(button)
+let todoList = [];
 
-alert()
+function validateinput() {
+
+}
+
+function addTodo() {
+
+}
+
+function deleteAllTodo() {
+
+}
+
+function filterTodo () {
+
+}
+
+function rendeTodoList() {
+    
+}
