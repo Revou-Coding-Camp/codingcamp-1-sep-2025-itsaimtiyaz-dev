@@ -1,0 +1,181 @@
+
+h1 {
+    color: #829672;
+}
+.text {
+    color: #d8959b;
+}
+body{
+    height: 100vh;
+    display: block;
+    margin: 8px;
+    justify-items: center;
+    background-image: url(https://i.pinimg.com/736x/d2/96/35/d296353680a5d53c2f84917ab969ce20.jpg);
+    background-position: center;
+    text-align: center;
+    padding: 15px;
+}
+.container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.todo-list{
+    flex:1;
+    padding:9px 11px;
+    border-radius:888px;
+    border:1px solid rgba(10,10,10,0.06);
+    box-shadow: 0 2px 8px rgba(10,10,10,0.03);
+    background: #fff;
+    outline:none;
+    font-size:0.95rem;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+.todo-list:focus{
+    box-shadow: 0 6px 18px rgba(10,10,10,0.06);
+    border-color: rgba(168,195,160,0.9)
+}
+.todo-list:active {transform: translateY(1px);}
+.btn{
+    color:#333;
+    border-color:#e6e6e6;
+    padding:10px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:600;
+    box-shadow: 0 6px 14px rgba(168,195,160,0.12);
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn:active{ transform: translateY(1px); }
+.tasks{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display: flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top: 10px;
+  }
+  .task{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 12px;
+    background: rgba(255,255,255,0.9);
+    border-radius:10px;
+    border: 1px solid rgba(10,10,10,0.04);
+    transition: transform .12s ease, box-shadow .12s ease;
+    font-family: 'patrick hand';
+  }
+  .task:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(10,10,10,0.06);
+  }
+  .task .checkbox{
+    width:18px;
+    height:18px;
+    border-radius:5px;
+    border:1.5px solid rgba(10,10,10,0.08);
+    display:inline-grid;
+    place-items:center;
+    cursor:pointer;
+    background: linear-gradient(180deg, #fff, #f7f8f7);
+  }
+  .task .title{
+    font-size:0.95rem;
+    color:var(--charcoal);
+  }
+  .task .meta{
+    margin-left:auto;
+    font-size:0.78rem;
+    color:rgba(74,74,74,0.6);
+  }
+
+  .card-footer{
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    font-size:0.85rem;
+    color:rgba(74,74,74,0.7);
+  }
+
+  .todo-card:focus{
+    outline: 3px solid rgba(168,195,160,0.18);
+    outline-offset:4px;
+  }
+
+  .error-message {
+  display: none;              
+  color: #fff;
+  background-color: #d8959b;  
+  font-size: 14px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #829672;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(130, 150, 114, 0.5);
+}
+
+.checkbox[aria-checked="true"] {
+  background-color: #829672;
+  border-color: #829672;
+  transition: all 0.3s ease;
+}
+
+.task.completed .title {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #829672;
+  color: #777;
+  transition: all 0.4s ease;
+}
+
+@keyframes fadeInCheck {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.task.completed .title {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #829672;
+  color: #777; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width:420px){
+  .todo-card{ padding:16px; width:92%; }
+}

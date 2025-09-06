@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>planify.ans</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <section>
+        <h1 style="font-size: 35px; font-weight:bolder; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">“Good Morning, Planners 🌸 Ready to focus today?”</h1>
+    </section>
 </head>
 <body>
-    
+    <div class="container">
+    <header>
+         <h1 class="text" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">To Do List</h1>
+    </header>
+   
+    <main>
+        <section id="to-do-input-section">
+            <form>
+                <input class="todo-list" type="text" id="todo-input" placeholder="Add a to do..." style="font-family: 'Courier New', Courier, monospace;">
+                <input class="todo-list" type="date" id="todo-date-input" placeholder="select due date.." style="font-family: 'Courier New', Courier, monospace;">
+                <button class="todo-list" type="button" id="add-todo-button" style="background-color: #829672; font-weight: bold;">ADD</button>
+            </form>
+            <p id="massage" style="color: palevioletred; font-weight: bold;"></p>
+        </section>
+
+        <section class="flex justify-between">
+            <button id="filter-btn" class="btn px-4 py-2">
+                FILTER
+            </button>
+
+            <button id="reset-btn" class="btn px-4 py-2">
+                RESET
+            </button>
+        </section>
+
+        <section>
+    <ul class="tasks" aria-live="polite">
+      <li class="task">
+        <div class="checkbox" role="checkbox" aria-checked="false"></div>
+        <div class="title"></div>
+        <div class="meta"></div>
+      </li>
+
+      <li class="task">
+        <div class="checkbox" role="checkbox" aria-checked="false"></div>
+        <div class="title"></div>
+        <div class="meta"></div>
+      </li>
+
+      <li class="task">
+        <div class="checkbox" role="checkbox" aria-checked="false"></div>
+        <div class="title"></div>
+        <div class="meta"></div>
+      </li>
+    </ul>
+        </section>
+    </main>
+
+    <footer>
+      <p style="opacity: .85;">©Planify.ans</p>
+    </footer>
+
+    </div>
+    <script src="js\script.js"></script>
 </body>
 </html>
